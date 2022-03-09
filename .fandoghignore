@@ -1,0 +1,16 @@
+*.pot
+*.mo
+.idea
+venv
+.git
+*.pyc
+mediafiles
+*.log
+.env
+staticfiles
+local_settings.py
+venv/
+.idea/
+*.jpg
+__pycache__/
+*.ogg

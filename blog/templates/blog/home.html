@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<title>My Movies</title>
+
+<body>
+{% for movie in movies %}
+<div style="  border: 1px outset black;
+  background-color: lightblue;
+  text-align: center;">
+<h1>{{ movie.name }}</h1>
+<img src="{{ movie.image }}" style="width:400px ;height:200px ; ">
+<h2>movie director : {{ movie.director}}</h2>
+<br>
+<br>
+<form action="/comment/{{movie.id}}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form }}
+    <input type="submit" value="add">
+</form>
+<br>
+<br>
+<form action="/movies/{{movie.id}}/comments" method="get" enctype="multipart/form-data">
+                        <input type="submit" name="comments" value="comments"/>
+                        {% csrf_token %}
+                        {{ comments }}
+                    </form>
+<!--<label >Choose language</label>-->
+
+<!--<select >-->
+<!--  <option value="english">english</option>-->
+<!--  <option value="french">french</option>-->
+<!--  <option value="spanish">spanish</option>-->
+<!--</select>-->
+<!--<button onclick="show({{movie.id}})">comments</button>-->
+
+<!--<div id="{{movie.id}}" style="display: none">-->
+<!--{% for comment in movie.comments.all %}-->
+
+<!--<h3> author : {{comment.author}}  <br>       </h3>-->
+
+<!--<h2> comment : {{comment.text}}   <br>       </h2>-->
+
+
+
+<!--{% endfor %}-->
+
+<!--</div>-->
+</div>
+{% endfor %}
+
+
+</body>
+<script>
+    function show(movie_id){
+<!--    document.getElementById(movie_id).style.cssText=" display : block; "-->
+    var x = document.getElementById(movie_id);
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
+</html>

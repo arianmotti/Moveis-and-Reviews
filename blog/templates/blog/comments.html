@@ -1,0 +1,21 @@
+{% block content %}
+<ul  style="  border: 5px outset black;
+  background-color: lightblue;
+  text-align: left;">
+    <div style="text-align : center">
+    <h2>{{movie.name}}</h2>
+     <img src="{{ movie.image }}" style="width:400px ;height:200px ; ">
+     <h3>director : {{movie.director}}</h3>
+
+        </div>
+    {% for cm in comments %}
+    <div style="  border: 1px outset red;
+  background-color: lightblue;
+  text-align: left; margin-top : 5px; padding-left : 5px">
+    <h3>author : {{cm.author}}</h3>
+    <h3>comment : {{cm.text}}</h3>
+<!--    <hr>-->
+    </div>
+    {% endfor %}
+</ul>
+{% endblock %}

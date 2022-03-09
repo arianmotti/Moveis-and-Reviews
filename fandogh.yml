@@ -1,0 +1,15 @@
+kind: ExternalService
+name: tamrin1
+spec:
+  image_pull_policy: Always
+  port: 80
+  source:
+    context: .
+    media_path: ./mediafiles
+    project_type: django
+    python_version: '3.8'
+    static_path: ./staticfiles
+    wsgi: tamrin1.wsgi
+  volume_mounts:
+  - mount_path: /usr/src/app/./mediafiles
+    sub_path: tamrin1/media
