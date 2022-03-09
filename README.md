@@ -14,4 +14,4 @@ The table below shows clouds and their services which we've used for this projec
 
 ## Usage
 
-[Here](https://tamrin1-arianmottaghi.fandogh.cloud/home/) is the result of deployment on Fandogh.
+[Here](https://tamrin1-arianmottaghi.fandogh.cloud/home) is the result of deployment on Fandogh.
