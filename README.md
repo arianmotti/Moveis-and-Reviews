@@ -1,5 +1,7 @@
 # Moveis-and-Reviews
 Simple web site for sharing your speeches about movies and change them to texts.
+the texts are filtered by anger.
+you can translate all of the comments to russian, french, english and chinese
 The table below shows clouds and their services which we've used for this project.
 
 | Cloud      | Service |
